@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block contents%}
+    <h1> BRING ON THE SNACKS! </h1> 
+    <img src="https://www.meme-arsenal.com/memes/873a451365b7c03459454a8172e2d6ca.jpg" width=250px hieght=auto>
+    <br><br>
+    {% for snack in object_list%}
+        <p><a href={% url 'snack_detail' snack.pk %}>{{ snack.name }}</a></p> 
+    {% endfor %}
+{% endblock contents%}
